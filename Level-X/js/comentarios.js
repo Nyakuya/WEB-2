@@ -1,4 +1,3 @@
-
  $(document).ready(function(){ //Espera a que termine de cargar la pagina.
   //Basicamente hace que el programa se ponga "estricto" y marque tus errores.
   'use strict' //EJ: No puedes usar variables sin declarar. ( X = 3.14; Daría ERROR, ya que X no está declarada).
