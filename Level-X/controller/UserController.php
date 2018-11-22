@@ -56,7 +56,7 @@ class UserController
     }
 
     function verifySignUp(){
-      $this->Titulo = "Level-X Sing Up";
+      // $this->Titulo = "Level-X Sing Up";
       $Username = $_POST["usernameId"]; //Obtiene datos del campo id usernameId en el form de login.tpl
       $Password = $_POST["passwordId"]; //Obtiene datos del campo id passwordId en el form de login.tpl
       $User = $this->model->getUser($Username); //Busca el nombre del usuario en la DB para chequear si ya existe.
@@ -66,9 +66,10 @@ class UserController
           //Insertar el usuario en la DB y redirigir.
           $Password = password_hash($Password, PASSWORD_DEFAULT); //Encripta la contraseña.
           $this->model->insertUser($Username, $Password); //Guarda el nombre de usaurio y la contraseña encriptada.
+          $User = $this->model->getUser($Username); //Traemos la info del usuario para rellenar $_SESSION["admin"], (si es admin o no, 0 por default). (Si solo ponia "0" no andaba bien).
           session_start(); //Como el usuario acaba de loguearse, guardamos su sesión.
           $_SESSION["User"] = $Username; //Guardamos el nombre del usuario correspondiente en la sesión.
-          $_SESSION["admin"] = 0; //Guardamos '0' y representa que este usuario NO tiene permisos de administrador. (Los recien registrados no tienen). (Chequeo con esto en el SecuredController).
+          $_SESSION["admin"] = $User[0]['admin']; //Guardamos '0' y representa que este usuario NO tiene permisos de administrador. (Los recien registrados no tienen). (Chequeo con esto en el SecuredController).
           header(USER); //Constante que muestra lo pagina pública de usuario. (Los "recien llegados" no tienen permiso para entrar en la administrador).
         }else{ //Si $Password está vacío, significa que no escribió una password.
           $this->view->mostrarSignUp($this->Titulo, "El campo Password no puede estar vacío");
