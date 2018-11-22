@@ -1,0 +1,17 @@
+
+<!-- 'if' de handlebars. En vez de '{if $tarea['completada'] == 1}' -->
+  <!-- Para mostrar un dato, EJ: '{$tarea['titulo']}', con handlebars sería '{{titulo}}'. '{$tarea['descripcion']}' sería '{{descripcion}}'.
+  //'{"borrar/{$tarea['id']}"' sería '"borrar/{{id}}"'. '"completada/{$tarea['id']}"' sería '"completada/{{id}}"'. -->
+
+  <ul class="list-group userPage">
+    {{#each comentarios}} <!-- 'foreach' de handlebars. En vez de '{foreach from=$Tareas item=tarea}' -->
+        <li class="list-group-item">
+          <p class="text-justify"><b>{{username}}</b> said: (About "<b>{{nombre}}</b>"):</p>
+          <p>{{comentario}}</p>
+          <p class="text-center">Calificación: {{valoracion}} / 5</p>
+            {{#if ../administrator}} <!-- Es necesario usar ../ porque estoy dentro de un #each. No se exactamente por que, pero así funciona handlebars -->
+              <p class="text-center"><button type="button" id="deleteComment" class="btn btn-primary deleteComment" data-id="{{id_comentario}}">BORRAR</button> </p>
+            {{/if}}
+        </li>
+    {{/each}}
+  </ul>

@@ -1,0 +1,325 @@
+html {
+	background:#090504;
+}
+
+body{
+  color:#eaeaea;
+	background:url(images/page_background/top.jpg) top no-repeat;
+}
+
+p, span {
+   color: #eaeaea;
+}
+
+a {
+  color:#fff;
+	text-decoration: none;
+}
+
+a:hover {
+	color:#bdf1e9;
+}
+
+ul {
+  list-style: none;
+}
+
+h1 {
+	font-size: 2em;
+	text-transform: uppercase;
+}
+
+.back-to-top {
+    cursor: pointer;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: none;
+}
+
+.navbar-inverse .nav > li > a {
+  color:#eaeaea;
+	font-family: Impact, Charcoal, sans-serif;
+  font-size:24px;
+}
+
+.navbar-inverse .nav > li > a:hover, .navbar-inverse .nav .active > a {
+  color:#bdf1e9;
+}
+
+.navbar-inverse {
+  margin-bottom: 1px;
+}
+
+.banner {
+  border-top:  6px solid #bdf1e9;
+}
+
+.content {
+  padding: 0 20px 20px;
+  background: url(images/content/main-n.png) left top repeat;
+	border-top: 6px solid #bdf1e9;
+	border-bottom: 6px solid #bdf1e9;
+}
+
+.section-tittle h1 {
+  text-align: center;
+  font-family: cursive;
+  padding-bottom: 10px;
+  text-shadow: 3px 2px #4070b0;
+}
+
+/*----ASIDE----*/
+
+.widget_aside {
+	border-bottom: 6px solid #bdf1e9;
+}
+
+.widget_aside h1, .post h1, .table-cell-game h1 {
+  font-weight: bold;
+	font-stretch: extra-condensed;
+}
+
+.widget_aside {
+	padding-bottom: 15px;
+}
+
+/*widget Mini Game*/
+
+.mini_game .mini_game_text{
+  padding: 10px;
+  width: 100%;
+}
+
+.box_game {
+  width: 100%;
+  height: 200px;
+  padding-top: 20px;
+}
+
+.box_game img{
+  width: 50%;
+}
+
+.box_game .PC {
+  height: 60%;
+  width: auto;
+}
+
+.box_game .resultado {
+  width: 100%;
+}
+
+.mini_game_buttons {
+  width: 90%;
+  height: 60px;
+  margin: 0 auto;
+}
+
+.mini_game_buttons button{
+  float:left;
+  width: 33%;
+  height: 100%;
+  border-radius: 2px;
+}
+
+.mini_game_buttons button:hover{
+  background-color: #4070b0;
+  border: none;
+}
+
+.mini_game_buttons button:active img{
+  height: 70%;
+}
+
+
+.mini_game_buttons img{
+  height: 95%;
+  margin: auto;
+}
+
+.variacion {
+	margin: 10px auto;
+}
+
+.score {
+  border-top: 1px dotted #818181;
+  padding: 0 20px;
+  margin-bottom: 20px;
+}
+
+.score h1{
+  color: #c20;
+  font-stretch: expanded;
+  text-shadow: 0 2px #d1d1d1;
+  font-size: 30px;
+  text-align: center;
+}
+
+.table-game>tbody>tr>th,.table-game>tbody>tr>td {
+  border: 1px dashed #4070b0;
+  text-align: center;
+}
+
+
+/*----FOOTER-----*/
+
+footer {
+	margin-bottom: 21px;
+	background: url(images/page_background/footer.jpg) bottom no-repeat;
+}
+
+textarea.form-control{
+    height:100px;
+}
+
+/*-----INICIO-----*/
+
+.post {
+  border-top: 1px dotted #818181;
+}
+
+.post .thumbnail{
+  color: #eaeaea;
+  padding-bottom: 20px;
+  line-height: 25px;
+  border: none;
+  background: none;
+  text-align: justify;
+}
+
+.post img {
+  width: 100%;
+}
+
+.thumbnail span {
+	font: bold 16px  "Trebuchet MS";
+	color: gray;
+}
+
+.thumbnail p {
+  margin: 10px 0;
+}
+
+.thumbnail .readmore, .thumbnail .return-principalPage {
+	background: #bdf1e9;
+  color: #000;
+  font-size: 20px;
+  padding: 6px 15px;
+	font-weight: bold;
+	font-stretch: condensed;
+  text-transform: uppercase;
+  border-radius: 4px;
+	float: right;
+	clear: both;
+}
+
+
+/*-----JUEGOS------*/
+
+.nav-games {
+	margin: 30px 0;
+}
+
+.nav-games>ul>li{
+	display:inline;
+}
+
+
+.game {
+	background-color: inherit;
+	margin-bottom: 15px;
+	border: 1px solid #bdf1e9;
+	overflow: hidden;
+}
+
+.game section {
+	padding: 0;
+}
+
+.game {
+	position: relative;
+}
+
+.game a>img {
+	opacity: 0.3;
+	width: 100%;
+}
+
+.game a>img:hover{
+	opacity: 1;
+}
+
+.game .text {
+	max-height: 80%;
+	bottom: 0;
+	padding: 0 3%;
+	position: absolute;
+	text-align: center;
+	overflow: hidden;
+}
+
+/* ------------------LISTA DE JUEGOS-------------------- */
+
+.thumbnail {
+	background-color: inherit;
+}
+
+.table-game {
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+}
+
+.table-cell-game {
+    display: table-cell;
+    text-align: center;
+		padding-left: 0;
+}
+
+.table-cell-game h1 {
+	font-size: 1.7em;
+	text-transform: uppercase;
+}
+
+.placeholder-game {
+		max-width: 725px;
+    max-height: 195px;
+		overflow: hidden;
+}
+
+.text-game {
+	max-height: 0;
+}
+
+.placeholder-game img {
+		display: block;
+    height: auto
+}
+
+/*-----Tabla Ranking-----*/
+.table>thead>tr>th, .table>tbody>tr>th, .table>tbody>tr>td {
+	text-align: center;
+	border-color: #bdf1e9;
+}
+
+.table-hover tbody tr:hover th, .table-hover tbody tr:hover td {
+    color: #090504;
+}
+
+/*---Formulario Tanking---*/
+.panel{
+	color: #090504;
+}
+
+/*--- SMARTY ---*/
+
+.userPage li {
+ background-color: black;
+ background-opacity: .4;
+ border: 6px solid #18110c;
+}
+
+.userPage a{
+ color: lightblue;
+}

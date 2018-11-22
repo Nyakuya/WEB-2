@@ -1,0 +1,163 @@
+body {
+  background-color: #000000;
+  background:url(images/background.png);
+  background-size: cover;
+}
+
+ul li {
+  list-style: none;
+}
+
+footer h1, footer p{
+  text-align: center;
+}	
+
+.titulo img {
+  width: 100%;
+}
+
+.jugador2 {
+  text-align: right;
+}
+
+.creditos img{
+  margin: 0 15px;
+  padding-top: 15px;
+}
+
+h1, p {
+  color: white;
+}
+
+p {
+  font-size: 2.5em;
+}
+
+.btn-decicion, .btn-decicion2, .btn-jugador2{
+  width: 30%;
+  position: relative;
+  background-color: transparent;
+  padding: 0;
+  text-align: center;
+  border-radius: 130px;
+}
+
+.btn-jugador2 {
+  margin-top: 100px;
+  background-color: #454952;
+}
+
+.btn-decicion img, .btn-decicion2 img, .btn-jugador2 img {
+  width: 100%;
+}
+
+.image-choice {
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+
+.middle-text {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#piedra .text, #papel .text, #tijera .text, #lagarto .text, #spock .text {
+  color: black;
+  opacity: 0.8;
+  font-stretch: ultra-condensed;
+  font-size: 1.3em;
+  font-weight: bold;
+  padding: 10px 10px;
+  border-radius: 50px;
+}
+
+#piedra .text {
+  background-color: #ffd6d6;
+}
+#papel .text {
+  background-color: #fff6d6;
+}
+#tijera .text {
+  background-color: #f6d6ff;
+}
+#lagarto .text {
+  background-color: #d8f2d8;
+}
+#spock .text {
+  background-color: #d6e6ff;
+}
+
+.btn-decicion:hover .middle-text, .btn-decicion2:hover .middle-text {
+  opacity: 1;
+}
+
+#piedra:active {
+  background-color: #ff6161;
+}
+
+#piedra:active .text {
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+  color: #ff6161;
+}
+
+#papel:active {
+  background-color: #ffd736;
+}
+
+#papel:active .text {
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+  color: #ffd736;
+}
+
+#tijera:active {
+  background-color: #dd63ff;
+}
+
+#tijera:active .text {
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+  color: #dd63ff;
+}
+
+#lagarto:active {
+  background-color: #3dff3d;
+}
+
+#lagarto:active .text {
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+  color: #3dff3d;
+}
+
+#spock:active {
+  background-color: #4f98ff;
+}
+
+#spock:active .text {
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+  color: #4f98ff;
+}
+
+#pc:hover, #humano:hover {
+  border: 5px solid #9fe8ff;
+}
+
+#pc:active, #humano:active {
+  border: 15px dotted #9fe8ff;
+}
+
+.vs-icon, #player1-choice img, #player2-choice img {
+  margin-top: 200px;
+  width: 100%;
+}
+
+.pc-icon {
+  width: 70%;
+  margin-top: 100px;
+}

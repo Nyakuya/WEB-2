@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Piedra Papel Tijera Lagarto o Spoke</title>
+
+    <!-- Bootstrap -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/master.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <!-- inicia Container -->
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-lg-offset-2 col-lg-8">
+          <header class="row">
+            <!-- COLUMNA JUGADOR 1 -->
+            <section class="col-md-4 col-lg-4">
+              <!-- SCORE - 1 -->
+              <section class="row">
+                <div class="col-md-12 col-lg-12">
+                  <h1>Score</h1>
+				  <!-- SCORE - (jugador1)-->
+                  <p id="score1">0</p>
+                </div>
+              </section>
+			  
+              <!-- CREDITOS -->
+              <section class="row">
+                <div class="col-md-12 col-lg-12">
+                  <div class="row creditos" dir="LTR">
+                    <div class="col-md-5 col-lg-5">
+                      <h1>Créditos</h1>
+                    </div>
+                    <div class="col-md-7 col-lg-7">
+					  <!-- CREDITOS - IMAGEN (jugador1)-->
+                      <img src="images/creditos.png" alt="creditos">
+                    </div>
+                  </div>
+				  <!-- CREDITOS - CANTIDAD (jugador1)-->
+                  <p id="creditos1">0</p>
+                </div>
+              </section>
+            </section>
+
+            <!-- COLUMNA JUEGO -->
+            <section class="col-md-4 col-lg-4 titulo">
+              <h1><img src="images/titulo-juego.png" alt="Piedra, Papel, Tijera, Lagarto o Spock"></h1>
+            </section>
+
+            <!-- COLUMNA JUGADOR 2 (PC o HUMANO) -->
+            <section class="col-md-4 col-lg-4 jugador2">
+              <!-- SCORE - 2-->
+              <section class="row">
+                <div class="col-md-12 col-lg-12">
+                  <h1>Score</h1>
+				  <!-- SCORE - (jugador2)-->
+                  <p id="score2">0</p>
+                </div>
+              </section>
+			  
+              <!-- CREDITOS -->
+              <section class="row">
+                <div class="col-md-12 col-lg-12">
+                  <div class="row creditos" dir="RTL">
+                    <div class="col-md-7 col-lg-7">
+					  <!-- CREDITOS - IMAGEN (jugador2)-->
+                      <img src="images/creditos.png" alt="creditos">
+                    </div>
+                    <div class="col-md-5 col-lg-5">
+                      <h1>Créditos</h1>
+                    </div>
+                  </div>
+				  <!-- CREDITOS - CANTIDAD (jugador2)-->
+                  <p id="creditos2">0</p>
+                </div>
+              </section>
+            </section>
+          </header>
+		  
+          <section class="row">
+            <section class="col-md-4 col-lg-4 jugador1">
+              <ul dir="LTR">
+                <li>
+                  <button type="button" class="btn btn-primary-outline btn-decicion" id="piedra">
+				     <!-- PIEDRA - IMAGEN -->
+                    <img src="images/piedra.png" class="image-choice" alt="piedra">
+                    <div class="middle-text">
+                      <div class="text">PIEDRA</div>
+                    </div>
+                  </button>
+                </li>
+                <li>
+                  <button type="button" class="btn btn-primary-outline btn-decicion" id="papel">
+				  <!-- PAPEL - IMAGEN -->
+                    <img src="images/papel.png" class="image-choice" alt="papel">
+                    <div class="middle-text">
+                      <div class="text">PAPEL</div>
+                    </div>
+                  </button>
+                </li>
+                <li>
+                  <button type="button" class="btn btn-primary-outline btn-decicion" id="tijera">
+				  <!-- TIJERA - IMAGEN -->
+                    <img src="images/tijera.png" class="image-choice" alt="tijera">
+                    <div class="middle-text">
+                      <div class="text">TIJERA</div>
+                    </div>
+                  </button>
+                </li>
+                <li>
+                  <button type="button" class="btn btn-primary-outline btn-decicion" id="lagarto">
+				  <!-- LAGARTO - IMAGEN -->
+                    <img src="images/lagarto.png" class="image-choice" alt="lagarto">
+                    <div class="middle-text">
+                      <div class="text">LAGARTO</div>
+                    </div>
+                  </button>
+                </li>
+                <li>
+                  <button type="button" class="btn btn-primary-outline btn-decicion" id="spock">
+				  <!-- SPOCK - IMAGEN -->
+                    <img src="images/spock.png" class="image-choice" alt="spock">
+                    <div class="middle-text">
+                      <div class="text">SPOCK</div>
+                    </div>
+                  </button>
+                </li>
+              </ul>
+            </section>
+            <section class="col-md-4 col-lg-4 game">
+              <div class="row">
+                <div class="col-md-4 col-lg-4">
+				  <!-- DECISION - (jugador1) -->
+                  <div id="player1-choice">
+
+                  </div>
+                </div>
+                <div class="col-md-4 col-lg-4">
+                  <img class="vs-icon" src="images/vs.png" alt="versus">
+                  <div class="radio-inline">
+				  <!-- STUART MODE - En modo 1 jugador, partida normal -->
+                    <label>
+					  <!-- RADIO BUTTON - STUART MODE -->
+                      <input type="radio" name="optionsRadios" class="variacionIA" value="StuartMode" checked>
+                      Stuart Mode
+                    </label>
+                  </div>
+                  <div class="radio-inline">
+				   <!-- SSHELDON MODE - En modo 1 jugador, la PC siempre gana o empata con Lagarto o Spock -->
+                    <label>
+					  <!-- RADIO BUTTON - SHELDON MODE -->
+                      <input type="radio" name="optionsRadios" class="variacionIA" value="SheldonMode">
+                      Sheldon Mode
+                    </label>
+                  </div>
+                </div>
+                <div class="col-md-4 col-lg-4">
+				  <!-- DECISION - (jugador1) -->
+                  <div id="player2-choice">
+
+                  </div>
+                </div>
+              </div>
+            </section>
+			
+            <section class="col-md-4 col-lg-4 jugador2">
+			 <!-- SELECCIONAR CONTRINCANTE -->
+              <div id="partial-render-jugador2">
+			  	<!-- AL SELECCIONAR - TODO DENTRO SE REEMPLAZA -->
+                <ul dir="RTL">
+                  <li>
+				   <!-- PC - CONTRINCANTE -->
+                    <button type="button" class="btn btn-primary-outline btn-jugador2" id="computer">
+                      <img src="images/hum-vs-pc.png" alt="humano vs pc">
+                    </button>
+                  </li>
+                  <li>
+				   <!-- JUGADOR 2 - CONTRINCANTE -->
+                    <button type="button" class="btn btn-primary-outline btn-jugador2" id="human">
+                      <img src="images/hum-vs-hum.png" alt="humano vs humano">
+                    </button>
+                  </li>
+                </ul>
+              </div>
+            </section>
+          </section>
+		  
+		   <!-- FOOTER -->
+		  <footer class="row">
+			<section class="col-md-12 col-lg-12">
+				<h1>Reglas del juego:</h1>
+				 <!-- REGLAS DEL JUEGO - IMAGEN -->
+				<p><img src="images/reglas_juego.png" alt="reglas del juego"></p>
+			</section>
+		  </footer>
+        </div>
+      </div>
+    </div>
+	<!-- termina Container -->
+	
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script> -->
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script type="text/javascript" src="../js/jquery-3.2.1.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="js/minigame.js"></script>
+    <script src="js/partial-render-game.js"></script>
+  </body>
+</html>

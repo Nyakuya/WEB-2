@@ -1,0 +1,3 @@
+
+Adentro tiene todos los comentarios con API REST, (es el controller de los comentarios que piden que hagamos con Api Rest, y usa el captcha aquí,
+así que sirve de guia).
