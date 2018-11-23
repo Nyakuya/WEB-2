@@ -27,8 +27,7 @@
     }else{
       valor = false;
     }
-
-    mostrarComentarios(jsonComentarios, valor); //Tras traer las tareas y guardarlas en jsonTareas, llama a la función mostrarTareas y pasa las tareas por parámetro.
+        mostrarComentarios(jsonComentarios, valor); //Tras traer las tareas y guardarlas en jsonTareas, llama a la función mostrarTareas y pasa las tareas por parámetro.
     })
   }
 
@@ -62,13 +61,16 @@
         "id_usuario": $('#id_usuario').val() //ID del usuario que hizo el comentario.
         }
         console.log(comentario); //Imprimo un LOG con el JSON de datos ingresados por el usuario.
-        fetch("api/comentario", {
-          method: 'POST',
-          headers: {'Content-Type': 'application/json'},
-          body: JSON.stringify(comentario)
-        })
-        .then(r => getComentarios()) //Si el POST tiene éxito, llama a una función de arriba que trae TODOS los comentarios y los muestra.
-        .catch(error => console.log("error")); //Si el post falla, imprime un log con el error.
+
+        setTimeout(function (){ //le hago un "delay" a la función, permitiendome elegir cada cuantos segundos se actualiza la lista de comentarios.
+          fetch("api/comentario", {
+            method: 'POST',
+            headers: {'Content-Type': 'application/json'},
+            body: JSON.stringify(comentario)
+          })
+          .then(r => getComentarios()) //Si el POST tiene éxito, llama a una función de arriba que trae TODOS los comentarios y los muestra.
+          .catch(error => console.log("error")); //Si el post falla, imprime un log con el error.
+        }, 2000); //Le digo cuanto tiempo debe pasar hasta que se actualiza la lista de comentarios. (2 segundos).
       });
 
 
