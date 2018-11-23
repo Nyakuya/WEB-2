@@ -91,7 +91,7 @@ class NavController{
     $Images = $this->imagesModel->getImages(); //Independientemente de si el usuario está o no logueado, hace falta traer las imagenes para mostrarlas en el display de los juegos.
     if ($this->Logueado == true){ //$Logueado definida en la clase, usada para muchas cosas, (cambiar 'Login' por 'Logout', desaparecer 'Sign Up', y usada en los propios comentarios para chequear).
       $Username = $_SESSION['User'];
-      $User = $this->userModel->getUser($Username); //Busca al usuario en la DB y trae todos sus datos.
+      $User = $this->userModel->getUser($Username); //Busca al usuario en la DB y trae todos sus datos. (La uso para obtener el ID del usuario cuando hace un comentario).
     }else{
       $User[0] = ''; //Si el usuario no está logueado, dejo la posicion [0] de '$User' vacía. (porque es un array ya que uso 'fetchAll' en el modelo en lugar de 'fetch').
     }

@@ -19,9 +19,9 @@ class CommentsModel extends ConnectModel
 
   //GET ALL
   function getComments(){ //Trae todos los juegos de la DB.
-      //$sentencia = $this->db->prepare( "SELECT * FROM comentarios"); //Selecciona todo de la tabla juegos.
-      //Selecciono toda la tabla de comentarios y le "uno" las filas de las columnas de la tabla Juegos y Usuarios que tengan la id_juego é id_usuario en común con la tabla comentarios.
-      $sentencia = $this->db->prepare("SELECT * FROM comentarios INNER JOIN juegos ON comentarios.id_juego = juegos.id_juego INNER JOIN usuarios ON comentarios.id_usuario = usuarios.id_usuario");
+      //Selecciono TODA la tabla de comentarios y solo las columnas "username" y "admin" de usuarios (para no traer la password), y le "uno" las filas de las columnas de la tabla Juegos
+      //y Usuarios que tengan la id_juego é id_usuario en común con la tabla comentarios.
+      $sentencia = $this->db->prepare("SELECT comentarios.*, usuarios.username, usuarios.admin FROM comentarios INNER JOIN juegos ON comentarios.id_juego = juegos.id_juego INNER JOIN usuarios ON comentarios.id_usuario = usuarios.id_usuario");
       $sentencia->execute();
       $comentarios = $sentencia->fetchAll(PDO::FETCH_ASSOC);
 

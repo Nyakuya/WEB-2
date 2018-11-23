@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2018-11-18 06:53:32
+/* Smarty version 3.1.33, created on 2018-11-23 22:11:12
   from 'C:\xampp\htdocs\Level-X\templates\header.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5bf0fe5c1016a4_26887910',
+  'unifunc' => 'content_5bf86cf0cab8b9_33063902',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'ee5f122e2cfa2919e4d3a7dbfb62c467fe40e673' => 
     array (
       0 => 'C:\\xampp\\htdocs\\Level-X\\templates\\header.tpl',
-      1 => 1542520404,
+      1 => 1543007352,
       2 => 'file',
     ),
   ),
@@ -20,11 +20,15 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5bf0fe5c1016a4_26887910 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5bf86cf0cab8b9_33063902 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="en">
   <head>
-    <base href="http://localhost/level-x/">
+    <!-- (SERVER_NAME EJ: localhost). (SERVER_PORT EJ: :8888). (PHP_SELF EJ: Level-X) -->
+    <base href="http://<?php echo $_SERVER['SERVER_NAME'];?>
+:<?php echo $_SERVER['SERVER_PORT'];
+echo dirname($_SERVER['PHP_SELF']);?>
+/">
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">

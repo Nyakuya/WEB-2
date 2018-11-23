@@ -43,7 +43,7 @@
 
               {if $Logueado == true}
                 <!-- PUNTUAR JUEGO Y COMENTAR -->
-                <form method="POST" action="reviewsFilter" class="text-center">
+                <form class="text-center">
                   <h2>Puntúa y Comenta un juego:</h2>
 
                   <!-- ID USUARIO -->
@@ -74,7 +74,8 @@
                     </div>
 
                     <p></p>
-                    <button type="submit" id="submitComment" class="btn btn-primary">Submit</button>
+                    <!-- Si ponia 'type="submit", como NO es un submit porque funciona con API REST y javascript tiene un onclick de '#submitComment', fallaba (en linux) -->
+                    <button id="submitComment" class="btn btn-primary">Submit</button>
                 </form>
               {else}
                 <h1 class="text-center">Debes estar logueado para poder comentar y valorar</h1>

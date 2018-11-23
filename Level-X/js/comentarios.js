@@ -45,6 +45,7 @@
     //Tras cargar los comentarios con API REST, les bindeo la función de clickear a lo que tenga la clase 'deleteComment', (en este caso el botón "borrar"). Sino haces esto, dicho boton no funciona.
     //(Siempre que se cargue contenido dinamicamente, hay que bindearle la funcionalidad). Guarda el valor de 'data-id' (El id_comentario) para poder saber que comentario quieres borrar.
     $('.deleteComment').bind("click", function(event){
+      event.preventDefault(); //Previene que se actualice la página (que redireccione). (Con el event que llega por parámetro. No lo pasas manualmente, equivale a lo que esta sucediendo).
       let data = $(this).data("id");
       deleteComment(data);
     });
@@ -52,8 +53,8 @@
 
 
   //SE GUARDAN EL COMENTARIO HECHO POR X USUARIO SOBRE X JUEGO, (POST).
-     $('#submitComment').click(function(){ //Cuando clickeas en el boton "Submit" que tiene el ID '#submitcomment', entra.
-        event.preventDefault(); //Previene que se actualice la página (que redireccione).
+     $('#submitComment').click(function(event){ //Cuando clickeas en el boton "Submit" que tiene el ID '#submitcomment', entra.
+        event.preventDefault(); //Previene que se actualice la página (que redireccione). (Con el event que llega por parámetro. No lo pasas manualmente, equivale a lo que esta sucediendo).
         let comentario = {
         "comentario": $('#commentText').val(), //Texto, comentario, tu opinion sobre el juego.
         "valoracion": $('#puntaje').val(), //Punta (entre 1 y 5) con el que se valora al juego.
@@ -76,7 +77,6 @@
 
       //SE BORRA EL COMENTARIO CLICKEADO POR EL ADMIN (USUARIO CUALQUIERA NO PUEDE BORRAR), (POST).
       function deleteComment(data){ //Cuando clickeas en el boton "Submit" que tiene el ID '#submitcomment', entra.
-         event.preventDefault(); //Previene que se actualice la página (que redireccione).
          fetch("api/comentario/"+ data, {
            method: 'DELETE',
          })

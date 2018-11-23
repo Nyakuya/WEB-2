@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2018-11-22 02:19:11
+/* Smarty version 3.1.33, created on 2018-11-23 22:15:56
   from 'C:\xampp\htdocs\Level-X\templates\gameComments.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5bf6040f328458_61084652',
+  'unifunc' => 'content_5bf86e0cc0ef03_04623553',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '6b4be8961133f814b0cc4d1fff740f710bd9abfb' => 
     array (
       0 => 'C:\\xampp\\htdocs\\Level-X\\templates\\gameComments.tpl',
-      1 => 1542849474,
+      1 => 1543007751,
       2 => 'file',
     ),
   ),
@@ -23,7 +23,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:gamesCommentFooter.tpl' => 1,
   ),
 ),false)) {
-function content_5bf6040f328458_61084652 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5bf86e0cc0ef03_04623553 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("file:header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 
@@ -88,7 +88,7 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
 
               <?php if ($_smarty_tpl->tpl_vars['Logueado']->value == true) {?>
                 <!-- PUNTUAR JUEGO Y COMENTAR -->
-                <form method="POST" action="reviewsFilter" class="text-center">
+                <form class="text-center">
                   <h2>Puntúa y Comenta un juego:</h2>
 
                   <!-- ID USUARIO -->
@@ -129,7 +129,8 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
                     </div>
 
                     <p></p>
-                    <button type="submit" id="submitComment" class="btn btn-primary">Submit</button>
+                    <!-- Si ponia 'type="submit", como NO es un submit porque funciona con API REST y javascript tiene un onclick de '#submitComment', fallaba (en linux) -->
+                    <button id="submitComment" class="btn btn-primary">Submit</button>
                 </form>
               <?php } else { ?>
                 <h1 class="text-center">Debes estar logueado para poder comentar y valorar</h1>
